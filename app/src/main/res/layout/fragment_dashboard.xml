@@ -5,143 +5,179 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="56dp"
+    android:paddingHorizontal="30dp"
     tools:context=".ui.dashboard.DashboardFragment">
 
-    <ImageView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:src="@drawable/logobrain" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_dashboard_1"
-        android:textColor="@color/colorAccent"
-        android:textSize="20sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/txt_answer_1"
-        android:inputType="text" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logobrain" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_dashboard_2"
-        android:textColor="@color/colorAccent"
-        android:textSize="20sp" />
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TableRow>
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/txt_dashboard_1"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/TaskName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/txt_answer_1"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/txt_dashboard_2"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="@string/monday"
+                        android:textSize="16sp" />
+
+                    <CheckBox
+                        android:id="@+id/MondayCB"
+                        android:layout_marginLeft="40dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="@string/tuesday"
+                        android:textSize="16sp" />
+
+                    <CheckBox
+                        android:id="@+id/TuesdayCB"
+                        android:layout_marginLeft="40dp" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/wednesday"
+                        android:textSize="16sp" />
+
+                    <CheckBox
+                        android:id="@+id/WednesdayCB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/thursday"
+                        android:textSize="16sp" />
+
+                    <CheckBox
+                        android:id="@+id/ThursdayCB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/friday"
+                        android:textSize="16sp" />
+
+                    <CheckBox
+                        android:id="@+id/FridayCB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/saturday"
+                        android:textSize="16sp" />
+
+                    <CheckBox
+                        android:id="@+id/SaturdayCB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sunday"
+                        android:textSize="16sp" />
+
+                    <CheckBox
+                        android:id="@+id/SundayCB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/txt_dashboard_3"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btnTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/monday"
-                android:textSize="20sp"/>
+                android:background="?android:attr/selectableItemBackground"
+                android:text="@string/txt_answer_2"
+                android:textAllCaps="false"
+                android:textColor="@color/Gray"
+                android:textSize="16sp" />
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_height="wrap_content" />
-        </TableRow>
-
-        <TableRow>
-            <TextView
+            <Button
+                android:id="@+id/btnSave"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/tuesday"
-                android:textSize="20sp"/>
+                android:layout_gravity="center"
+                android:background="@color/colorAccent"
+                android:paddingHorizontal="50dp"
+                android:text="Done"
+                android:textAllCaps="true"
+                android:textColor="@color/white" />
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_height="wrap_content" />
-        </TableRow>
+        </LinearLayout>
 
-        <TableRow>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/wednesday"
-                android:textSize="20sp"/>
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_height="wrap_content" />
-        </TableRow>
-
-        <TableRow>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/thursday"
-                android:textSize="20sp"/>
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_height="wrap_content" />
-        </TableRow>
-
-        <TableRow>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/friday"
-                android:textSize="20sp"/>
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_height="wrap_content" />
-        </TableRow>
-
-        <TableRow>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/saturday"
-                android:textSize="20sp"/>
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_height="wrap_content" />
-        </TableRow>
-
-        <TableRow>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/sunday"
-                android:textSize="20sp"/>
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_height="wrap_content" />
-        </TableRow>
-    </TableLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_dashboard_3"
-        android:textSize="20sp"
-        android:textColor="@color/colorAccent"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_answer_2"
-        android:background="?android:attr/selectableItemBackground"/>
+    </ScrollView>
 
 </LinearLayout>
