@@ -2,14 +2,23 @@ package huerta.carlos.mydigimind
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class RegistroActivity : AppCompatActivity() {
+
+    private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro)
+
+        auth = Firebase.auth
 
         val btn_registrar: Button = findViewById(R.id.btn_registrar)
 
@@ -32,21 +41,34 @@ class RegistroActivity : AppCompatActivity() {
         ) {
 
             if (contra1 == contra2) {
-
-                //registrarFirebase()
-
+                registrarFirebase(correo, contra1)
             } else {
                 Toast.makeText(
                     this, "Las contraseña no coinciden",
                     Toast.LENGTH_SHORT
                 ).show()
             }
-
         } else {
             Toast.makeText(
                 this, "Ingresar datos",
                 Toast.LENGTH_SHORT
             ).show()
         }
+    }
+
+    private fun registrarFirebase(email: String, password: String) {
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    val user = auth.currentUser
+                    Toast.makeText(baseContext, "Authentication successful.",
+                        Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(
+                        baseContext, "Authentication failed.",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
     }
 }

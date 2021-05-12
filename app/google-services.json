@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "514675184703",
+    "project_id": "mydigimind-e3548",
+    "storage_bucket": "mydigimind-e3548.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514675184703:android:7bc6d7f38ae6297656948a",
+        "android_client_info": {
+          "package_name": "huerta.carlos.mydigimind"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "514675184703-jprbvtjssvffr1mniuatufvr631mrvih.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxnAzsXS3N-UDrF0lTWcXTZyFxTyB7lnQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "514675184703-jprbvtjssvffr1mniuatufvr631mrvih.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
